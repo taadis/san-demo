@@ -19,6 +19,20 @@ var AboutComponent = san.defineComponent({
     template: '<p>关于</p>'
 });
 
+/*
+* JS 运行组件
+*/ 
+var JsRunComponent = san.defineComponent({
+    template: `<div>
+        <textarea id="jsCode" style="width:319px;height:127px;">
+        layer.open({
+            title: '在线调试',
+            content: '可以填写任意的layer代码'
+          });
+        </textarea></div>
+    `
+});
+
 // san-router
 var sanRouter = window['san-router'];
 
@@ -27,7 +41,8 @@ var Link = sanRouter.Link;
 
 var AppComponent = san.defineComponent({
     components:{
-        'router-link': Link
+        'router-link': Link,
+        'js-run': JsRunComponent
     },
     template:`
         <div class="app-container">
@@ -51,7 +66,9 @@ var AppComponent = san.defineComponent({
         <div class="app-content">
             <div id="main"></div>
         </div>
-        </div>`
+        <js-run></js-run>
+        </div>
+    `
 });
 
 // 实例化App组件,附加到指定元素上

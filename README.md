@@ -3,6 +3,11 @@
 
 > 不用 [NodeJS],不走[Webpack],只要纯纯的[html/css/js]...
 
+## TODO
+- 如何分离组件?
+- ...
+
+
 ## 参考文档
 - [San]
 - [san-router](https://github.com/baidu/san-router)
