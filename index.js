@@ -100,3 +100,16 @@ router.listen(function(e, config){
 // 启动路由
 router.start();
 
+layui.use(["jquery", "layer"], function(){
+    var $ = layui.$;
+    var layer = layui.layer;
+    $.ajax({
+        type: "GET",
+        url: "http://taadis.gitee.io/commands.json",
+        contenType: "application/json",
+        success: function(data, statusText, xhr){
+            console.log(data);
+        }
+    });
+});
+
